@@ -11,11 +11,11 @@ process.on('uncaughtException', (error: Error) => {
     process.exit(1)
 })
 
-process.on('unhandledRejection', (reason, promise: Promise<any>) => {
+process.on('unhandledRejection', (reason: any, promise: Promise<any>) => {
     Log.warn(`unhandledRejection event: ${JSON.stringify(reason)}`)
 })
 
-const startProcess = async () => {
+const startProcess = async (): Promise<void> => {
     try {
         await app.listen(port)
         Log.info(`Server started on port ${port}`)

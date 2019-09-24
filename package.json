@@ -1,5 +1,5 @@
 {
-  "name": "fastify-api",
+  "name": "auth-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "^7.4.6",
+    "axios": "^0.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "fastify": "^2.8.0",
@@ -18,6 +19,7 @@
     "pino": "^5.13.3"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/dotenv": "^6.1.1",
     "@types/mongoose": "^5.5.17",
     "@types/node": "^12.7.5",

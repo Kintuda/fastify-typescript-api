@@ -2,6 +2,7 @@ import fastify from 'fastify'
 import http from 'http'
 import log from './libs/logger'
 import utilRouter from './routes/utils'
+import authRouter from './routes/auth'
 
 const server: fastify.FastifyInstance<
     http.Server,
@@ -10,5 +11,6 @@ const server: fastify.FastifyInstance<
 > = fastify({ logger: log })
 
 server.register(utilRouter)
+server.register(authRouter)
 
 export default server
