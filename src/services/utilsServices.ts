@@ -12,23 +12,3 @@ const heathCheck = async (config: AxiosRequestConfig): Promise<number> => {
         return 500
     }
 }
-
-const healthCheckLicense = async () => {
-    const config: AxiosRequestConfig = {
-        url: CONFIG.license + '/status',
-        method: 'GET',
-        timeout: 3600
-    }
-    return heathCheck(config)
-}
-
-const healthCheckAccount = async () => {
-    const config: AxiosRequestConfig = {
-        url: CONFIG.account + '/status',
-        method: 'GET',
-        timeout: 3600
-    }
-    return heathCheck(config)
-}
-
-export { healthCheckAccount, healthCheckLicense }

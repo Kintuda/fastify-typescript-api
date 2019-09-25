@@ -10,6 +10,8 @@ const server: fastify.FastifyInstance<
     http.ServerResponse
 > = fastify({ logger: log })
 
+server.register(require('fastify-cors'))
+server.register(require('fastify-helmet'))
 server.register(utilRouter)
 server.register(authRouter)
 
